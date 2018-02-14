@@ -1,0 +1,679 @@
+/*
+* ================================================================
+* Aspect Ratio
+* ================================================================
+*/
+
+.aspect-ratio-16by9 {
+    width: 100%;
+    position: relative;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.aspect-ratio-16by9::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.aspect-ratio-16by9::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* =================== Basic css =============================================*/
+
+/*
+[class*="section_padding_"]:nth-child(odd) {
+    background-color: azure;
+}
+
+[class*="section_padding_"]:nth-child(even) {
+    background-color: antiquewhite;
+}
+*/
+
+.section_padding_100 { /**/
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section_padding_100_50 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.section_padding_100_150 {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.section_padding_50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section_padding_50_20 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.section_padding_150 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.section_padding_200_100 {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.section_padding_0_100 {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+.section_padding_70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.section_padding_0_50 {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+/*====================================*/
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-line-left,
+.header-line {
+    width: 80px;
+    height: 2px;
+    background-color: #fb397d;
+    margin-top: 15px;
+}
+
+.header-line-left {
+    margin-bottom: 15px;
+}
+
+.header-line {
+    margin-left: calc(50% - 40px);
+    margin-bottom: 15px;
+}
+
+
+
+
+.style1 {
+    background-color: #F8F8F8 !important;
+}
+
+.style2 {
+    background-color: #29377E !important;
+}
+
+.style3 {
+    background-color: #0C1234 !important;
+}
+
+
+
+.container-custom {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .container-custom {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-custom {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-custom {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-custom {
+        max-width: 1000px;
+    }
+}
+
+/*=================Header Section ==============================================*/
+
+.logo {
+    letter-spacing: 4px;
+    color: #28377e;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.nav-item a {
+    color: #28377e;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+
+/*========================= Intro Section ======================================*/
+
+.intro-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.intro-box1,
+.intro-box2 {
+    height: 100%;
+    float: left;
+    position: absolute;
+}
+
+.intro-box1 {
+    width: 60%;
+    left: 0;
+    top: 0;
+    background-image: url(../images/split1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.intro-box1::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: #f2622c;
+    opacity: .8;
+}
+
+.intro-box2 {
+    width: 70%;
+    right: 0;
+    top: 0;
+    background-image: url(../images/split2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 43% 100%);
+}
+
+.intro-box2::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: #28377e;
+    opacity: .8;
+}
+
+.intro-section h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.9rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.intro-section a {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+@media (min-width: 570px) {
+    .intro-box2 {
+        right: -80px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    }
+
+    .intro-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .intro-box2 {
+        right: -80px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    }
+
+    .intro-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro-box2 {
+        right: -80px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    }
+
+    .intro-section h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro-box2 {
+        right: -80px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    }
+
+    .intro-section h1 {
+        font-size: 4rem;
+    }
+}
+
+
+/*about us Section
+==================================================================================*/
+
+.about-us-box h2 {
+    text-transform: uppercase;
+    color: #204f87;
+    font-weight: 700;
+}
+
+.about-us-box p {
+    color: #b0b0b1;
+}
+
+.about-us {
+    width: 100%;
+    position: relative;
+}
+
+.about-bg1 {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    top: 137px;
+    left: -74px;
+    background-image: url(../images/bg-texture.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.about-bg2 {
+    position: absolute;
+    bottom: 22px;
+    right: 54px;
+    width: 190px;
+    height: 190px;
+    background-image: url(../images/bg-texture.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.about-us-box img {
+        padding-left: 50px;
+}
+
+/*What we do Section
+==================================================================================*/
+
+
+.what-section {
+    position: relative;
+    background-image: url(../images/bg-texture2.png);
+    background-repeat: no-repeat;
+    background-position: -11px -200px;
+    background-size: contain;
+}
+
+.what-we-do {
+    position: relative;
+}
+
+.what-we-do-box {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin: 0 10px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.what-we-do-box:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2f85;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.what-we-do-box p,
+.what-we-do-box a {
+    display: none;
+}
+
+.what-we-do-box:hover.what-we-do-box p,
+.what-we-do-box:hover.what-we-do-box a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.what-we-do-box:hover.what-we-do-box a {
+    top: 170px;
+}
+
+.what-we-do-bg {
+    position: absolute;
+    width: 50%;
+    height: 40vh;
+    right: 0;
+    bottom: -220px;
+    background-image: url(../images/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-clip-path: polygon(21% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(21% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+}
+
+.what-we-do-bg::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: #f2622c;
+    opacity: .8;
+}
+
+.section-heading h1 {
+    text-transform: uppercase;
+    color: #204f87;
+    font-weight: 700;
+}
+
+/* Attorney Section
+==================================================================================*/
+
+.our-attorney {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.our-attorney::before {
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2f85;
+    opacity: .8;
+}
+
+.our-attorney-box {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 0;
+    position: relative;
+}
+
+.our-attorney-box img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.our-attorney-box:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2f85;
+    opacity: .8;
+}
+
+.our-attorney-box h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+.our-attorney-box-info p {
+    color: #929dcf;
+}
+
+.our-attorney-box a {
+    color: #f2622c;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.attorney-caption {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.our-attorney-box p {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.our-attorney-box:hover.our-attorney-box p {
+    display: block;
+}
+
+
+
+
+
+
+
+/*Second intro Section
+==================================================================================*/
+
+.second-intro-section {
+    width: 100%;
+    height: 40vh;
+    background-image: url(../images/split2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative
+}
+
+.second-intro-section::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: #f2622c;
+    opacity: .8;
+}
+
+.second-intro-section h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.9rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.second-intro-section a {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+@media (min-width: 570px) {
+    .second-intro-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .second-intro-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .second-intro-section h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .second-intro-section h1 {
+        font-size: 4rem;
+    }
+}
+
+/*language Section
+==================================================================================*/
+
+
+.language-box h2 {
+    color: #28377e;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.language-box p {
+    color: #b1b0b1;
+}
+.language-box a {
+    color: #f2622c;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* News Section
+==================================================================================*/
+
+
+.news-box h2 {
+    color: #28377e;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.news-box p {
+    color: #b1b0b1;
+}
+.news-box a {
+    color: #f2622c;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.news-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0,0,0,0.2);
+} 
+
+
+
+
+
+
+/* Contact us Section
+==================================================================================*/
